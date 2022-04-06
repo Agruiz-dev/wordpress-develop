@@ -15,3 +15,18 @@ define( 'WP_USE_THEMES', true );
 
 /** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp-blog-header.php';
+
+    if(function_exists('mi_funcion')):
+        echo mi_funcion(); 
+    endif;
+    if(function_exists('mi_imagen')):
+    
+        echo mi_imagen();
+    endif;
+   if(function_exists('miga_pan')):
+         miga_pan();
+   endif
+
+
+?>
+  

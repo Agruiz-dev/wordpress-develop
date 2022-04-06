@@ -8,7 +8,7 @@
  * @subpackage Twenty_Twenty_Two
  * @since Twenty Twenty-Two 1.0
  */
-
+ 
 
 if ( ! function_exists( 'twentytwentytwo_support' ) ) :
 
@@ -149,3 +149,45 @@ add_action( 'wp_head', 'twentytwentytwo_preload_webfonts' );
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
+
+function mi_funcion(){
+	//el codigo de mi función
+	return 'soy el codigo de mi función';
+}
+
+function mi_imagen(){
+	return '<img src="./miimagen" alt="mi imagen"/>';
+}
+
+function miga_pan(){
+	
+	global $post;
+		if(!is_home()){
+			$miga = 'Esta aqui';
+			$miga .= '<a href="'.get_bloginfo('wpurl').'">';
+			$miga .= get_bloginfo('name');
+			$miga .= '</a>>';
+		
+	
+		$parents = array_reverse(get_ancestors($post-> ID,'page'));
+		foreach($parents as $parent){
+			$miga.= '<a href="'.get_permalink($parent).'">';
+			$miga.= get_the_title($parent);
+	
+			$miga.='</a>>';
+		}
+		return  $miga;
+	}
+	}
+
+
+
+
+
+
+
+
+
+		
+			
+		
